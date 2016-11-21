@@ -7,9 +7,13 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
 	<body ng-app="app">
-		<div ng-view class="container">
-			<p>Loading...</p>
-		</div>
+            <div id="all" class="" ng-controller="AppController as app">
+                <app-nav items="app.nav"></app-nav>
+                <div ng-view class="container">
+                    <p>Loading...</p>
+                </div>
+            </div>            
+		
 		<script src="lib/jquery/jquery-3.1.1.min.js"></script>
 		<script src="lib/angular/angular.min.js"></script>
 		<script src="lib/angular/angular-locale_it-it.js"></script>

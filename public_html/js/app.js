@@ -4,6 +4,9 @@ app.conf=function ($routeProvider) {
     .when('/', { 
       templateUrl: 'views/home.html' 
     })
+    .when('/tasks', { 
+      templateUrl: 'views/tasks.html' 
+    })
     .otherwise({ 
       redirectTo: '/' 
     }); 
