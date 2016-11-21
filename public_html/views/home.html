@@ -1,1 +1,15 @@
-﻿<h2>Home</h2>
+<section ng-if = "id">
+    <h2> {{ d.scadenza || date:"EEEE, dd MMMM yyyy" }} {{ d.nota }} <span ng-hide="d.nota||d.scadenza">Nuovo appunto</span></h2>
+    
+    <form>
+        <label>Scadenza</label>
+        <input ng-model="d.scadenza" type="date" name="Scadenza" required autofocus>
+        <label>Nota</label>
+        <input ng-model="d.nota" type="text" minlenght="1" maxlenght="60" placeholder="Inserisci qui l'impegno del giorno" name="Impegni" required>
+        <button type='submit' title='Salva' >Salva</button>
+    </form>
+</section>
+
+<section ng-if="!id">
+    
+</section>
